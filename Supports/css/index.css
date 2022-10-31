@@ -1,0 +1,235 @@
+body {
+  font-family: 微软雅黑;
+  font-size: 20px;
+  user-select: none;
+  color: rgb(255, 255, 255);
+}
+
+/* ---------------- 项目标题格式（刘海） ---------------*/
+        .proj_title {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            background: -webkit-linear-gradient(rgba(44, 62, 180,0.7),rgba(44, 62, 180,0.8));
+            z-index: 10000;
+        }
+
+        .proj_title_style {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%,0);
+            height: 30px;
+            padding: 0 30px;
+        }
+       .proj_title_style::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0px;
+            transform: translate(-50%,0);
+            background: transparent;
+            border-left: 30px solid transparent;
+            border-top: 30px solid rgba(44, 62, 180, 0.8);
+            border-right: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            position: absolute;
+            left: 50%;
+            top: 0
+        }
+       .proj_title_style span {
+            position: relative;
+            top: -20px;
+            left: 0;
+            font-weight: bold;
+            font-size: 26px;
+            background-image:-webkit-linear-gradient(top ,#ffffff,#ccf1ee); 
+            -webkit-background-clip:text; 
+            -webkit-text-fill-color:transparent; 
+            font-family: "黑体";
+        }
+
+/* ---------------- 搜索框列表格式（事件列表） ---------------*/
+#seachBox {
+  position: absolute;
+  top: 58%;
+  right: 10px;
+  border: 1px solid #97a7be;
+  background-color: #1b4074;
+  z-index: 888;
+}
+#searchList {
+  position: absolute;
+  top: 50px;
+  display: none;
+  height: 33vh;
+  width: 400px;
+  border: 1px solid #97a7be;
+  background-color: #1b4074;
+  z-index: 999;
+}
+
+#searchList ul {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #1b4074;
+}
+
+#searchList ul li {
+  width: 100%;
+  cursor: pointer;
+  padding: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-family: 微软雅黑;
+}
+
+#searchList ul li:hover {
+  color: blue;
+}
+
+#selectBar {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  color: #fff;
+  z-index:1000;
+}
+#selectBar .select-item {
+  font-size: 20px;
+  /* height: 60px; */
+  /* line-height: 60px; */
+}
+#selectBar .select-item label {
+  font-size: 20px;
+}
+
+/* ---------------- 浮动信息框样式 ---------------*/
+.windowFloat {
+  transition: all .5s;
+  position: absolute;
+  top: 120px;
+  right: 10px;
+  width: 400px;
+  border: 1px solid #97a7be;
+  background-color: #1b4074;
+  z-index: 99;
+  border-radius: 2px;
+  opacity: .8; 
+}
+/* ---------------- 浮动信息框header样式 ---------------*/
+  .windowFloat .header-windowFloat {
+    width: 100%;
+    display: flex;
+    background-color: rgba(70, 80, 160, 0.95);
+    justify-content: space-between; 
+}
+    .windowFloat .header-windowFloat .left {
+      padding-left: 8px;
+      display: flex;
+      align-items: center; 
+}
+      .windowFloat .header-windowFloat .left img {
+        width: 18px;
+        height: 18px; 
+}
+      .windowFloat .header-windowFloat .left span {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        color: #fff;
+        margin-top: 2px; 
+}
+    .windowFloat .header-windowFloat .right {
+      display: flex;
+      align-items: center;
+      padding-right: 10px; 
+}
+      .windowFloat .header-windowFloat .right .r-box {
+        background-color: #456a9b;
+        display: flex;
+        align-items: center;
+        width: 14px;
+        height: 13px; 
+}
+        .windowFloat .header-windowFloat .right .r-box img {
+          width: 100%;
+          height: 100%;
+          cursor: pointer; 
+}
+
+/* ---------------- 浮动信息框body样式 ---------------*/
+  .windowFloat .body-windowFloat {
+    width: 100%; }
+    .windowFloat .body-windowFloat ul {
+      padding-left: 0; }
+    .windowFloat .body-windowFloat li {
+      list-style: none;
+      padding: 8px 0 8px 20px;
+      color: #fff;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .windowFloat .body-windowFloat li span {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 150px; }
+      .windowFloat .body-windowFloat li i {
+        font-size: 16px;
+        font-style: normal;
+        padding-right: 30px; }
+      .windowFloat .body-windowFloat p {
+          padding-left: 5px;
+          padding-top: 5px;
+          color: #fff;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 18px;}
+
+/* ---------------- 雷达图样式 ---------------*/
+#radarChart {
+  width: 300px;
+  height: 230px;
+  margin:  auto;
+}
+
+/* ---------------- 加载过程样式 ---------------*/
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.loading .circle {
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  animation: run 1s linear infinite;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+@keyframes run {
+  from {
+    transform: translate3d(-50%, -50%, 0) rotate(0);
+  }
+  to {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+
+
